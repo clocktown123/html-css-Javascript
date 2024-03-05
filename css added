@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Webpage</title>
+</head>
+<body style="background-color: lightgrey; font-family: 'Verdana', sans-serif;">
+
+	<!-- This is a heading with inline CSS for color and font size -->
+	<h1 style=" color: maroon; font-size: 28px; text-align: center; margin-top: 20px;">Welcome to my webpage</h1>
+
+	
+	<!--Paragraph -->
+	<p style="background-color: darkgrey; padding: 15px; border: 4px solid black; border-radius: 5px; margin: 20px; font-size: 28px; text-align: center; margin-top: 20px;">
+		This webpage is used to describe the five nights at freddy's series.
+	</p>
+
+	<br>
+
+	<button type="button">FNAF</button>
+
+	<!-- Sub-heading -->
+	<h2 style="text-align: center; margin-top: 20px;">The Main Five</h1>
+
+	<!-- Unordered List -->
+
+	<ul>
+
+	<!-- Image -->
+	<img src="Freddy.png" alt="Freddy Fazbear" style="width: 500px; height: auto; border: 4px solid brown;"> <br>
+
+	<!--Paragraph -->
+	<p>Freddy Fazbear, one of the main antagonists in the Five Nights at Freddy's seriese, <br> and head of the stage. He's the lead singer in the Freddy Fazbear's Pizza establishment's band.</p1><br>
+	
+	<br>
+
+	<!-- Image -->
+	<img src="Bonnie.png" alt="Bonnie the Bunny aka Bonnie Bun" style="width: 500px; height: auto; border: 4px solid blue;"> <br>
+
+	<!--Paragraph -->
+	<p>Bonnie Bun, one of the main antagonists in the Five Nights at Freddy's seriese <br> and the guitarist of the band. Bonnie is the most agressive of the main crew and will <br> make sure at all costs that you will not leave alive</p1><br>
+
+	<br>
+
+	<!-- Image -->
+
+	<img src="Chica.png" alt="Chica the Chicken" style="width: 500px; height: auto; border: 4px solid yellow;"> <br>
+
+	<!--Paragraph -->
+	<p>Chica the Chicken, one of the main antagonists in the Five Nights at Freddy's seriese, <br> and the backup singer in the band. Chica is always looking for a slice of pizza to enjoy, but <br> if she were to run out, make sure she doesn't get hungry for something else.</p1><br>
+
+	<br>
+
+	<!-- Image -->
+	<img src="Foxy.png" alt="Foxy the Pirate Fox" style="width: 500px; height: auto; border: 4px solid red;"> 
+	
+	<!--Paragraph -->
+	<p>Foxy the pirate fox, one of the main antagonists in the Five Nights Freddy's seriese. <br> An animitronic pirate fox, he's an entertainer who originally preformed on his own, seperate <br> stage in the Freddy Fazbear's Pizza establishment, away from the core animitronics Freddy, Bonnie, and Chica.</p1>
+
+	<br>
+	<br>
+
+	<!-- List with different list and style and padding -->
+	<u1 style="font-size: 18px; list-style-type: square; padding-left: 40px;">
+		<li>Freddy</1i>
+		<li>Bonnie</1i>
+		<li>Foxy</1i>
+		<li>Chica</1i>
+		<li>the gilded one...</1i>
+	</u1>
+
+	<br>
+
+	<!-- Hyperlink -->
+	<p><a href="https://www.youtube.com/watch?v=PQBOm2gMlwg" style=" color: black;">It's me.</a></p> 
+
+</body>
+</html>
