@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changing Colors</title>
+
+    <!#################################################################################>
+    <!-- CSS: Styling of the webpage -->
+    <style>
+        .color-text {
+            font-size: 24px; /* Sets the font size */
+            text-align: center; /* Aligns text to the center */
+            margin-top: 20px; /* Adds space on the top */
+        }
+    </style>
+</head>
+<body>
+
+    <!#################################################################################>
+    <!-- HTML: Structure of the webpage -->
+
+    <!-- Button element - when clicked, it will run the JavaScript function 'changeColors' -->
+    <button onclick="changeColors()">Click Me to Change Colors</button>
+
+    <!-- Div element where the text color will change -->
+    <div id="text1" class="color-text">Watch the colors change!</div>
+
+    <!-- random line screaming colors-->
+    <div id="text2" class="color-text">COLORSSSS</div>
+
+    <!#################################################################################>
+    <!-- JavaScript: Script to make the webpage interactive -->
+
+    <script>
+        function changeColors() {
+            // Array of colors for the text and background
+            var colors = ['red','blue', 'gold', 'green', 'purple'];
+
+            var colors2 = ['black', 'brown', 'cornflowerblue', 'crimson', 'goldenrod']
+
+            // Getting the text element by its ID
+            var element = document.getElementById('text1');
+
+            var element2 = document.getElementById('text2');
+
+            // Picking a random color from the array for the text
+
+            var randomColor = colors2[Math.floor(Math.random() * colors2.length)]; // color changer for the first line
+
+            var randomColor2 = colors[Math.floor(Math.random() * colors.length)]; // random color changer for the second line
+
+            element.style.color = randomColor; // Changing the text color
+
+            element2.style.color = randomColor2; // Changing the text color
+
+            var backgroundColor = colors2[Math.floor(Math.random() * colors2.length)];
+            
+            document.body.style.backgroundColor = backgroundColor; //change background color
+        }
+    </script>
+
+</body>
+</html>
