@@ -21,7 +21,7 @@
 
 	<br>
 
-	<button type="button">FNAF</button>
+	<!-- <button type="button">FNAF</button> -->
 
 	<!-- Sub-heading -->
 	<h2 style="text-align: center; margin-top: 20px;">Current Classes:</h1>
@@ -31,9 +31,11 @@
 	<ul>
 
 	<!-- Image -->
-	<img src="Physics.png" alt="Physics Class" style="width: 500px; height: auto; border: 4px solid rgb(248, 233, 29);"> <br>
+	<img src="Physics.png" alt="Physics Class" style= "float: left;width: 500px; height: auto; border: 4px solid rgb(248, 233, 29);"> <br>
 
 	<!--Paragraph -->
+	<h>This class is a two semester class that teaches students the basics of physics.</h><br>
+
 	<h2>Class level:</h2><br>
         <label for="Class-Type"></label>
         <select name="Class-Type" id="Class-Type">
@@ -41,11 +43,27 @@
           <option value="College">College</option>
         </select>
 	
+	<br>
+    <br>
+	<br>
+    <br>
+	<br>
+    <br>
+	<br>
+    <br>
+	<br>
+    <br>
+	<br>
+    <br>
+	<br>
+    <br>
 	<br>
     <br>
 
 	<!-- Image -->
-	<img src="Algebra.png" alt="Algebra Class" style="width: 500px; height: auto; border: 4px solid maroon;"> <br>
+	<img src="Algebra.png" alt="Algebra Class" style="float: left;width: 500px; height: auto; border: 4px solid maroon;"> <br>
+
+	<h>This class is a one semester class that teaches students the basics of Algebra.</h><br>
 
 	<!--Paragraph -->
 	<h2>Class level:</h2><br>
@@ -55,12 +73,28 @@
           <option value="College">College</option>
         </select>
 	
-	<br>
-    <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 
 	<!-- Image -->
 
-	<img src="English.png" alt="English Class" style="width: 500px; height: auto; border: 4px solid blue;"> <br>
+	<img src="English.png" alt="English Class" style="float: left;width: 500px; height: auto; border: 4px solid blue;"> <br>
+
+	<h>This class is a one semester class that teaches students about how race,<br> ethnicity, and culture all relate to reading, writing, and identity.</h><br>
 
 	<!--Paragraph -->
 	<h2>Class level:</h2><br>
@@ -70,11 +104,27 @@
           <option value="College">College</option>
         </select>
 	
-	<br>
-    <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
 
 	<!-- Image -->
-	<img src="latin.png" alt="LatinAmerican History Class" style="width: 500px; height: auto; border: 4px solid green;"> 
+	<img src="latin.png" alt="LatinAmerican History Class" style="float: left;width: 500px; height: auto; border: 4px solid green;"> 
+
+	<h>This class is a one semester class that teaches students about how Latin American history.</h><br>
 	
 	<!--Paragraph -->
 	<h2>Class level:</h2><br>
@@ -84,22 +134,11 @@
           <option value="College">College</option>
         </select>
 	
-	<br>
-    <br>
+		<br>
+		<br>
+		
 
-	<!-- List with different list and style and padding -->
-	<u1 style="font-size: 18px; list-style-type: square; padding-left: 40px;">
-		<li>Freddy</1i>
-		<li>Bonnie</1i>
-		<li>Foxy</1i>
-		<li>Chica</1i>
-		<li>the gilded one...</1i>
-	</u1>
-
-	<br>
-
-	<!-- Hyperlink -->
-	<p><a href="https://www.youtube.com/watch?v=PQBOm2gMlwg" style=" color: black;">It's me.</a></p> 
+	
 
 </body>
 </html>
