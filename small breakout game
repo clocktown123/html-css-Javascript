@@ -32,7 +32,7 @@
 		var BallX = canvas.width/2;
 		var BallY = canvas.height-30;
 		var bVx = 2;
-		var bVy = -2;
+		var bVy = -2.3;
         var ballRadius = 10;
 
         //paddle variables
@@ -56,6 +56,10 @@
 
         const bricks = [];
 
+        var score = 0;
+
+        var fnafColors = ['#B53737', '#1C2951', '#D5B85A', '#402F1D', '#808080']
+
         //loop over each column of bricks. think of 'c' as each column in a grid.
         for (let c = 0; c < brickColumnCount; c++){
             bricks[c] = []; // start a new row in the current column
@@ -72,32 +76,55 @@
             for (let c = 0; c < brickColumnCount; c++){
                 //loop through each row of bricks in the current column
                 for (let r = 0; r < brickRowCount; r++){
-                    //calculate the x position of each brick based on its column number (c)
-                    // the bricks width, the padding between bricks, and the left offset
-                    const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
 
-                    //calculate the y position of each brick based on its row number (r)
-                    // the bricks width, the padding between bricks, and the left offset
-                    const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+                    if (bricks[c][r].isAlive == 1){
+                        //calculate the x position of each brick based on its column number (c)
+                        // the bricks width, the padding between bricks, and the left offset
+                        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
 
-                    //update the position of each brick in the array
-                    bricks[c][r].x = brickX;
-                    bricks[c][r].y = brickY;
+                        //calculate the y position of each brick based on its row number (r)
+                        // the bricks width, the padding between bricks, and the left offset
+                        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
 
-                    //start drawing the brick
-                    ctx.beginPath 
-                    //draw a rectangle at the position (brickX, brickY) with the specified width and height
-                    ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                    //set the color of the brick
-                    ctx.fillStyle = "#0095DD";
-                    // fill the brick with the set color.
-                    ctx.fill();
-                    // finish the drawing path
-                    ctx.closePath();
+                        //update the position of each brick in the array
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+
+                        //start drawing the brick
+                        ctx.beginPath 
+                        //draw a rectangle at the position (brickX, brickY) with the specified width and height
+                        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                        //set the color of the brick
+                        ctx.fillStyle = "#0095DD";
+                        // fill the brick with the set color.
+                        ctx.fill();
+                        // finish the drawing path
+                        ctx.closePath();
+                    }
                 }
             }
 
             
+        }
+
+        function BrickCollision(){
+            for (let c = 0; c < brickColumnCount; c++){
+                for (let r = 0; r < brickRowCount; r++){
+                    const b = bricks[c][r];
+                    if (b.isAlive === 1){
+                        if(
+                            BallX > b.x &&
+                            BallX < b.x+brickWidth &&
+                            BallY > b.y &&
+                            BallY < b.y+brickHeight
+                        ){
+                            bVy = -bVy;
+                            score += 1;
+                            b.isAlive = 0;
+                        }
+                    }
+                }
+            }
         }
 
         //keyboard input
@@ -184,6 +211,42 @@
 
         }
 
+        function drawScore(){
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "#FFFFFF"
+            ctx.fillText(`Score: ${score}`, 8, 20);
+            if(score === brickRowCount * brickColumnCount){
+                alert("YOU WIN, GG");
+                document.location.reload();
+                clearInterval(interval);
+            }
+        }
+
+        function drawMessage(){
+            const message1 = ["y", "o", "u"];
+            const message2 = ["a", "r", "e"];
+            const message3 = ["l", "o", "v", "e", "d"];
+
+            ctx.font = "30px Arial";
+            ctx.fillStyle = "#FFFFFF";
+
+            message1.forEach((text, index) => {
+                const textX = brickWidth * 4 + (index * (brickWidth + brickPadding))
+                const textY = brickHeight;
+                ctx.fillText(text, textX, textY);
+            })
+            message2.forEach((text, index) => {
+                const textX = brickWidth * 4 + (index * (brickWidth + brickPadding))
+                const textY = brickHeight * 2 + brickPadding;
+                ctx.fillText(text, textX, textY);
+            })
+            message3.forEach((text, index) => {
+                const textX = brickWidth * 3 + (index * (brickWidth + brickPadding))
+                const textY = brickHeight * 3 + brickPadding * 2;
+                ctx.fillText(text, textX, textY);
+            })
+        }
+
 		function draw(){
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			drawBall();
@@ -192,8 +255,13 @@
             movePaddle();
             checkCollision();
             drawBricks();
+            BrickCollision();
+            drawScore();
+            //drawMessage();
 
 		}
+
+
 
 		interval = setInterval(draw,10);
 
