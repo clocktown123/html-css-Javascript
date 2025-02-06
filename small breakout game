@@ -231,18 +231,18 @@
             ctx.fillStyle = "#FFFFFF";
 
             message1.forEach((text, index) => {
-                const textX = brickWidth * 4 + (index * (brickWidth + brickPadding))
-                const textY = brickHeight;
-                ctx.fillText(text, textX, textY);
-            })
-            message2.forEach((text, index) => {
-                const textX = brickWidth * 4 + (index * (brickWidth + brickPadding))
+                const textX = brickWidth * 2 + (index * (brickWidth + brickPadding))
                 const textY = brickHeight * 2 + brickPadding;
                 ctx.fillText(text, textX, textY);
             })
-            message3.forEach((text, index) => {
-                const textX = brickWidth * 3 + (index * (brickWidth + brickPadding))
+            message2.forEach((text, index) => {
+                const textX = brickWidth * 2 + (index * (brickWidth + brickPadding))
                 const textY = brickHeight * 3 + brickPadding * 2;
+                ctx.fillText(text, textX, textY);
+            })
+            message3.forEach((text, index) => {
+                const textX = brickWidth * 1 + (index * (brickWidth + brickPadding))
+                const textY = brickHeight * 4 + brickPadding * 3;
                 ctx.fillText(text, textX, textY);
             })
         }
@@ -254,10 +254,10 @@
             drawPaddle();
             movePaddle();
             checkCollision();
+            drawMessage();
             drawBricks();
             BrickCollision();
             drawScore();
-            //drawMessage();
 
 		}
 
